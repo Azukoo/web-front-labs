@@ -1,27 +1,27 @@
 body {
-    background-color: lightblue;
-    color: maroon;
+    background-color: rgb(144, 67, 85);
+    color: rgb(72, 5, 5);
     font-family: Arial;
     margin: 0px;
 }
 
 main {
-    background-color: aquamarine;
-    color: brown;
+    background-color: rgb(207, 146, 92);
+    color: rgb(174, 36, 36);
     font-family: Arial;
     margin: 0px;
 }
 
 footer{
-    background-color: blanchedalmond;
-    color: blueviolet;
+    background-color: rgb(123, 14, 74);
+    color: rgb(190, 184, 196);
     font-family: Arial;
     margin: 0px;
 }
 
 header {
-    background-color: beige;
-    color: orange;
+    background-color: rgb(123, 14, 74);
+    color: rgb(221, 202, 209);
     font-family: Arial;
     margin: 0px;
 }
