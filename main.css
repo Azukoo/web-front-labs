@@ -6,8 +6,6 @@ body {
 }
 
 body:link {
-    color: black;
-    text-decoration: underline;
 }
 
 main {
@@ -18,8 +16,6 @@ main {
 }
 
 main:visited {
-    color:blueviolet;
-    text-decoration: wavy;
 }
 
 footer{
@@ -32,6 +28,7 @@ footer{
 footer:hover{
     color:red;
     opacity: 0.3;
+    transition: 1s 2s;
 }
 
 header {
@@ -44,4 +41,5 @@ header {
 header:active{
     color: pink;
     text-decoration: double;
+    transition: 1s 2s;
 }
