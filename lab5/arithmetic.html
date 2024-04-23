@@ -14,6 +14,14 @@
                 let result = a + b;
                 alert("Сумма " + a + " и " + b + " равна " + result);
             }
+            function showAuthor() {
+                let author = "Автор страницы:\nСанданова Виктория Болотовна";
+                alert(author);
+            }
+            function showWelcome() {
+                let welcome = 'Добро пожаловать на мою страницу! \nХорошего дня!';
+                alert(welcome);
+            }
             </script>
         <style>
             .message{
@@ -30,19 +38,25 @@
                 border-radius: 40px;
                 opacity: 100; 
             }
+            .footer{
+                cursor: pointer;
+            }
+            .header{
+                cursor: pointer;
+            }
         </style>
     </head>
     <body> 
-        <header>
+        <header class="footer" onclick="showAuthor()">
             НГТУ, ФБ, Лабораторная работа 4
         </header>
 
         <main>
             <div class="message" onclick="showSum()">Сколько будет 5154+7891?</div>
-            <div class="message">Узнать, кто автор страницы</div>
+            <div class="message" onclick="showAuthor()">Узнать, кто автор страницы</div>
         </main>
 
-        <footer>
+        <footer class="footer" ondblclick="showWelcome()">
             &copy;Санданова Виктория, ФБИ-22, 2 курс, 2024
         </footer>
     </body>
