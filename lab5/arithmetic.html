@@ -9,8 +9,11 @@
         <link rel="icon" href="C:\Users\Victoria Bolotovna\Desktop\favicon-32x32.png">
         <script>
             function showSum() {
-                let a = 5154;
-                let b = 7891;
+                let inputA = document.getElementById('numberA');
+                let inputB = document.getElementById('numberB');
+
+                let a = parseInt(inputA.value);
+                let b = parseInt(inputB.value);
                 let result = a + b;
                 alert("Сумма " + a + " и " + b + " равна " + result);
             }
@@ -27,22 +30,34 @@
             .message{
                 cursor: pointer;
                 display: inline-block;
-                width: 100px;
+                color: blueviolet; 
+                width: 200px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                margin: 200px;
+                padding: 50px;
                 text-align: center;
-                height: 100;
-                color: blueviolet;
-                background-color: aliceblue;
-                margin: 100px;
-                padding-top: 100;
-                padding: 200px;
-                border-radius: 40px;
-                opacity: 100; 
+                display: inline-block;
+                background-color: #ccc;
+                margin-top: -100px;
             }
             .footer{
                 cursor: pointer;
             }
             .header{
                 cursor: pointer;
+            }
+            .number{ 
+                cursor: pointer;
+                width: 200px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                margin: 200px;
+                padding: 50px;
+                text-align: center;
+                display: inline-block;
+                color: yellow;
+                margin-top: 1px;
             }
         </style>
     </head>
@@ -52,7 +67,9 @@
         </header>
 
         <main>
-            <div class="message" onclick="showSum()">Сколько будет 5154+7891?</div>
+            <div class="number"><label>Первое число: <input type="number" value="0" id="numberA"></label><br></div>
+            <div class="number"><label>Второе число: <input type="number" value="0" id="numberB"></label><br></div>
+            <div class="message" onclick="showSum()">Найти сумму чисел</div>
             <div class="message" onclick="showAuthor()">Узнать, кто автор страницы</div>
         </main>
 
