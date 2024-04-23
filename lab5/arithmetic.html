@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
-        <title>Санданова Виктория Болотовна. "Хулиномика"</title>
+        <title>Санданова Виктория Болотовна.</title>
         <link rel="stylesheet" href="../main.css">
         <link rel="shortcut icon" href="C:\Users\Victoria Bolotovna\Desktop\favicon.ico" type="image/x-icon">
         <link rel="shortcut icon" href="C:\Users\Victoria Bolotovna\Desktop\favicon-16x16.png">
@@ -25,6 +25,34 @@
                 let welcome = 'Добро пожаловать на мою страницу! \nХорошего дня!';
                 alert(welcome);
             }
+            function showDifference() {
+                let inputX = document.getElementById('numberA');
+                let inputY = document.getElementById('numberB');
+
+                let x = parseInt(inputX.value);
+                let y = parseInt(inputY.value);
+                let result = x - y;
+                alert("Разность " + x + " и " + y + " равна " + result);
+            }
+            function showMultuplier() {
+                let inputX = document.getElementById('numberA');
+                let inputY = document.getElementById('numberB');
+
+                let x = parseInt(inputX.value);
+                let y = parseInt(inputY.value);
+                let result = x * y;
+                alert("Произведение " + x + " и " + y + " равна " + result);
+            }
+            function showCount() {
+                let inputX = document.getElementById('numberA');
+                let inputY = document.getElementById('numberB');
+
+                let x = parseInt(inputX.value);
+                let y = parseInt(inputY.value);
+                let result = x / y;
+                alert("Деление " + x + " и " + y + " равна " + result);
+            }   
+
             </script>
         <style>
             .message{
@@ -70,6 +98,9 @@
             <div class="number"><label>Первое число: <input type="number" value="0" id="numberA"></label><br></div>
             <div class="number"><label>Второе число: <input type="number" value="0" id="numberB"></label><br></div>
             <div class="message" onclick="showSum()">Найти сумму чисел</div>
+            <div class="message" onclick="showDifference()">Найти разность чисел</div>
+            <div class="message" onclick="showMultuplier()">Найти произведение чисел</div>
+            <div class="message" onclick="showCount()">Найти деление чисел</div>
             <div class="message" onclick="showAuthor()">Узнать, кто автор страницы</div>
         </main>
 
