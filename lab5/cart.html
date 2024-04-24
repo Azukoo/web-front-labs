@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Санданова Виктория Болотовна.Корзина</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="shortcut icon" href="C:\Users\Victoria Bolotovna\Desktop\favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="C:\Users\Victoria Bolotovna\Desktop\favicon-16x16.png">
+        <link rel="icon" href="C:\Users\Victoria Bolotovna\Desktop\favicon-32x32.png">
+        <script>
+            function showSum() {
+                let input1 = document.getElementById('bananas')
+                let input2 = document.getElementById('grape')
+                let input3 = document.getElementById('apple')
+                let input4 = document.getElementById('peach')
+                let input5 = document.getElementById('watermelo')
+    
+                let resultat= document.getElementById('resultat');
+                let a = parseInt(input1.value);
+                let b = parseInt(input2.value);
+                let c = parseInt(input3.value);
+                let d = parseInt(input4.value);
+                let e = parseInt(input5.value);
+                let result = a*120 + b*250 + c*150 + d*180 + e*45;
+                resultat.innerHTML='Общая цена: ' + result + ' руб';
+            }
+            function show() {
+                document.getElementById('bananas').value = '';
+                document.getElementById('grape').value = '';
+                document.getElementById('apple').value = '';
+                document.getElementById('peach').value = '';
+                document.getElementById('watermelo').value = '';
+
+            document.getElementById('resultat').innerHTML = '';
+        }
+        
+        </script>
+                 <style>
+                    .message{
+                        cursor: pointer;
+                        display: inline-block;
+                        border-color: yellow;
+                        border: 4px solid;
+                        border-radius: 10px;
+                        box-shadow: 10px 10px 5px #0002;
+                        margin: 20px;
+                        width: 300px;
+                        background-color: aliceblue;
+                    }
+                    .prod{
+                        width: 400px;
+                        height: 400px;
+                        border: 4px solid;
+                        border-radius: 10px;
+                        box-shadow: 10px 10px 5px #0002;
+                        display: inline-block;
+                        vertical-align: top;
+                        margin: 29px;
+                        background-color: aquamarine;
+                        text-align: center;
+                    }
+                    .placeholder {
+                        color: rgb(133, 133, 153);
+                        font-size: 1.5em;
+                    }
+
+                </style>
+    </head>
+
+    <body>
+        <header onclick="showAuthor()">
+            НГТУ, ФБ, Лабораторная работа 5
+        </header>
+        
+        <main>
+            <div class="prod">
+                <h1>Корзина продуктов</h1>
+                <label>Бананы(120 руб/кг.):<br><input type="number" placeholder="введите кг" value="0" id="bananas"/></label><br>
+                <label>Виноград(250 руб/кг.): <br><input type="number" placeholder="введите кг" value="0" id="grape"></label><br>
+                <label>Яблоки(150 руб/кг.): <br><input type="number" placeholder="введите кг" value="0" id="apple"></label><br>
+                <label>Персики(180 руб/кг.): <br><input type="number" placeholder="введите кг" value="0" id="peach"></label><br>
+                <label>Арбуз(45 руб/кг.): <br><input type="number" placeholder="введите кг" value="0" id="watermelo"></label><br>
+                <div id="resultat"></div>
+                <div class="message" onclick="showSum()">Рассчитать</div>
+                <div class="message" onclick="show()">Сбросить</div>
+            </div>
+        </main>
+
+        <footer>
+            &copy; Санданова Виктория, ФБИ-22, 2 курс, 2024
+        </footer>
+    </body>
+</html>
