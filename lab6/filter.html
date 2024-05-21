@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Санданова Виктория Болотовна.Фильтрация</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="shortcut icon" href="C:\Users\Victoria Bolotovna\Desktop\favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="C:\Users\Victoria Bolotovna\Desktop\favicon-16x16.png">
+        <link rel="icon" href="C:\Users\Victoria Bolotovna\Desktop\favicon-32x32.png">
+        <style>
+            .picture {
+                border: 5px solid #333; 
+                border-radius: 10px; 
+               background-color: aliceblue;
+               padding: 15px;
+               width: 80%;
+               border-radius: 5px;
+               margin-bottom: 10px;
+
+            }
+
+        </style>
+    <script>
+        function filter() {
+            let color = document.getElementById('wear-color').value;
+            let type = document.getElementById('wear-type').value;
+            let wear = document.getElementById('wear');
+            if(color == 'Красный' && type == 'Футболка') {
+                wear.src = 'red_f.webp';
+            }
+            else if(color == 'Белый' && type == 'Футболка') {
+                wear.src = 'white_f.jpg';
+            }
+            else if(color == 'Черный' && type == 'Футболка') {
+                wear.src = 'black_f.jpg';
+            }
+            else if(color == 'Красный' && type == 'Поло') {
+                wear.src = 'red.polo.jpg';
+            }
+
+             else if(color == 'Белый' && type == 'Поло') {
+                wear.src = 'white_p.jpg';
+            }
+
+            else if(color == 'Черный' && type == 'Поло') {
+                wear.src = 'black_p.jpg';
+            }
+
+            else if(color == 'Красный' && type == 'Майка') {
+                wear.src = 'red_m.jpg';
+            }
+            else if(color == 'Белый' && type == 'Майка') {
+                wear.src = 'white_m.webp';
+            }
+            else {
+                (color == 'Черный' && type == 'Майка') 
+                wear.src = 'black_m.webp';
+            }
+        }
+    
+    </script>
+    </head>
+
+    <body>
+        <header onclick="showAuthor()">
+            НГТУ, ФБ, Лабораторная работа 6
+        </header>
+        
+        <main>
+            <div class="picture">
+                Цвет одежды:
+                <select id="wear-color">
+                    <option>Красный</option>
+                    <option>Белый</option>
+                    <option>Черный</option>
+                </select><br>
+
+                Тип одежды:
+                <select id="wear-type">
+                    <option>Футболка</option>
+                    <option>Поло</option>
+                    <option>Майка</option>
+                </select><br>
+
+                <button onclick="filter()">ОК</button><br>
+
+                <img id="wear">
+            </div>
+        </main>
+
+        <footer>
+            &copy; Санданова Виктория, ФБИ-22, 2 курс, 2024
+        </footer>
+    </body>
+</html>
