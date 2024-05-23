@@ -8,6 +8,19 @@
         <link rel="shortcut icon" href="C:\Users\Victoria Bolotovna\Desktop\favicon.ico" type="image/x-icon">
         <link rel="shortcut icon" href="C:\Users\Victoria Bolotovna\Desktop\favicon-16x16.png">
         <link rel="icon" href="C:\Users\Victoria Bolotovna\Desktop\favicon-32x32.png">
+    <style>
+        .message{
+            cursor: pointer;
+                display: inline-block;
+                color: blueviolet; 
+                border: 5px solid #ccc;
+                border-radius: 10px;
+                text-align: center;
+                display: inline-block;
+                background-color: #ccc;
+        }
+
+    </style>
     <script>
         function addNewBlock() {
             let newBlock = document.createElement('div');
@@ -80,7 +93,29 @@
                 main.appendChild(block);
             }
         }
-
+        function addred_purple() {
+            let main = document.querySelector('main');
+            let numberOfCircles = parseInt(document.getElementById('numberOfCircles').value);
+            for (let i = numberOfCircles; i > 0; i--) {
+                let circle = document.createElement('div');
+                circle.style.width = '40px';
+                circle.style.height = '40px';
+                circle.style.borderRadius = '50%';
+                circle.style.display = 'inline-block';
+                circle.style.marginRight = '5px';
+                circle.style.textAlign = 'center';
+                circle.style.lineHeight = '40px';
+                circle.style.fontSize = '14px';
+                circle.innerHTML = i;
+                if (i % 2 === 0) {
+                    circle.style.backgroundColor = 'red';
+                } 
+                else {
+                    circle.style.backgroundColor = 'purple';
+                }
+                main.appendChild(circle);
+            }
+        }
 
     </script>
     </head>
@@ -90,12 +125,15 @@
             НГТУ, ФБ, Лабораторная работа 7
         </header>
         
-        <main>
+        <main class="message">
+            <input type="number" id="numberOfBlocks" placeholder="Введите количество блоков">
+            <input type="number" id="numberOfCircles" placeholder="Введите количество кругов">
             <button onclick="addNewBlock()">Добавить блок</button>
             <button onclick="addNewBlocks()">Добавить блоки</button>
             <button onclick="add20_50()">20 => 50</button>
             <button onclick="add10_80()">10 => -80</button>
             <button onclick="addBlocksWithOpacity()">Блоки с прозрачностью</button>
+            <button onclick="addred_purple()">Цветные круги</button>
         </main>
 
         <footer>
