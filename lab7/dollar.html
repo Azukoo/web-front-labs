@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Санданова Виктория Болотовна. Лабораторная 7</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="shortcut icon" href="C:\Users\Victoria Bolotovna\Desktop\favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="C:\Users\Victoria Bolotovna\Desktop\favicon-16x16.png">
+        <link rel="icon" href="C:\Users\Victoria Bolotovna\Desktop\favicon-32x32.png">
+    <script>
+        function showExchange() {
+            const exchange = [
+                60.3849, 60.1412, 60.4109, 60.4411, 60.2970, 60.6679, 
+                60.7281, 60.7158, 60.7742, 60.1938
+            ];
+            let table = document.getElementById('dollar-table');
+            for(let i = 0; i< exchange.length; i++) {
+                let tr = document.createElement('tr');
+                table.style.backgroundColor = "white";
+                let td = document.createElement('td');
+                td.innerText = exchange[i];
+                tr.appendChild(td);
+                table.appendChild(tr);
+            }
+        }
+        function calculateAverage() {
+            let elements = document.getElementsByClassName('number');
+            let sum = 0;
+            for(let i = 0; i < elements.length; i++) {
+                sum += parseInt(elements[i].innerText);
+            }
+            let average = sum / elements.length;
+            average = average.toFixed(2);
+            document.getElementById("detail").innerText = `Среднее значение: ${Average}`;
+            document.getElementById("button").style.display = "none";
+        }
+    </script>
+    </head>
+
+    <body>
+        <header onclick="showAuthor()">
+            НГТУ, ФБ, Лабораторная работа 7
+        </header>
+        
+        <main>
+            <button onclick="showExchange()">Курс доллара</button>
+            <table border="1" id="dollar-table"></table>
+            <button id="button" onclick="calculateAverage">Показать среднее значение</button>
+            <div id="detail"></div>
+            
+
+        </main>
+
+        <footer>
+            &copy; Санданова Виктория, ФБИ-22, 2 курс, 2024
+        </footer>
+    </body>
+</html>
