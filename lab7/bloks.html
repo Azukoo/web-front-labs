@@ -32,7 +32,6 @@
                 newBlock.style.padding = '15px';
                 newBlock.style.margin = '100px';
                 newBlock.innerText =  `Блок № ${i+1}: 2*${i}<sup>2</sup> = ${2 * i**2}`;
-
                 main.appendChild(newBlock);
             }
         }
@@ -41,11 +40,31 @@
             let main = document.querySelector('main');
             for(let i = 20; i<=50; i+=2.5) {
                 let newBlock = document.createElement('div');
-                newBlock.style.width = '40px';
+                newBlock.style.width = '100px';
                 newBlock.style.border = '1px solid';
-                newBlock.style.color = 'yellow'
-                newBlock.innerHTML = `$(i)`;
+                newBlock.style.color = 'black';
+                newBlock.style.backgroundColor = "pink";
+                newBlock.style.textAlign = "center";
+                newBlock.innerHTML = `${i}`;
                 main.appendChild(newBlock);
+            }
+        }
+        function add10_80() {
+            let main = document.querySelector('main');
+            let counter = 10;
+            while (counter >= -80) {
+                let circle = document.createElement('div');
+                circle.style.width = '32px';
+                circle.style.height = '32px';
+                circle.style.borderRadius = '50%';
+                circle.style.backgroundColor = 'yellow';
+                circle.style.display = 'inline-block';
+                circle.style.marginRight = '8px';
+                circle.style.textAlign = 'center';
+                circle.style.lineHeight = '20px';
+                circle.innerHTML = counter;
+                main.appendChild(circle);
+                counter -= 3;
             }
         }
 
@@ -61,7 +80,8 @@
         <main>
             <button onclick="addNewBlock()">Добавить блок</button>
             <button onclick="addNewBlocks()">Добавить блоки</button>
-            <button onclick="add20_50()">20=>50</button>
+            <button onclick="add20_50()">20 => 50</button>
+            <button onclick="add10_80()">10 => -80</button>
         </main>
 
         <footer>
