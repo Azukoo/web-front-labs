@@ -23,15 +23,15 @@
             let main = document.querySelector('main');
             let numberOfBlocks = parseInt(document.getElementById('numberOfBlocks').value);
             let initialWidth = 150; 
-            for(let i = 0; i<10; i++) {
+            for(let i = 0; i < numberOfBlocks; i++) {
                 let newBlock = document.createElement('div');
                 newBlock.style.backgroundColor = 'green';
                 newBlock.style.height = '40px';
-                newBlock.style.border = '2px solid black';
-                newBlock.style.width = '200px';
-                newBlock.style.padding = '10px';
-                newBlock.style.margin = '10px';
-                newBlock.innerText = `Блок № ${i+1} : 2*${i}<sup>2</sup> = ${2* i**2}`;
+                newBlock.style.border = '5px solid black';
+                newBlock.style.width = `${initialWidth + i * 20}px`;
+                newBlock.style.padding = '15px';
+                newBlock.style.margin = '100px';
+                newBlock.innerText =  `Блок № ${i+1}: 2*${i}<sup>2</sup> = ${2 * i**2}`;
 
                 main.appendChild(newBlock);
             }
@@ -43,6 +43,7 @@
                 let newBlock = document.createElement('div');
                 newBlock.style.width = '40px';
                 newBlock.style.border = '1px solid';
+                newBlock.style.color = 'yellow'
                 newBlock.innerHTML = `$(i)`;
                 main.appendChild(newBlock);
             }
@@ -60,7 +61,7 @@
         <main>
             <button onclick="addNewBlock()">Добавить блок</button>
             <button onclick="addNewBlocks()">Добавить блоки</button>
-            <button onclick="add20_50()">20 => 50</button>
+            <button onclick="add20_50()">20=>50</button>
         </main>
 
         <footer>
