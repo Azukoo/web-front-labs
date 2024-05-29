@@ -9,15 +9,46 @@
         <link rel="shortcut icon" href="C:\Users\Victoria Bolotovna\Desktop\favicon-16x16.png">
         <link rel="icon" href="C:\Users\Victoria Bolotovna\Desktop\favicon-32x32.png">
         <style>
-            .messeg {
-                background-color: aliceblue;
+            .current {
+                font-size: 8em; /* Установим крупный размер шрифта */
+                text-align: center; /* Выравнивание по центру */
+                background-color: rgb(224, 224, 133);
                 border: 8px solid #000;
                 padding: 10px;
                 margin: 10px 0;
                 font-family: Arial, sans-serif;
-                text-align: center;
-                font-size: 20em;
             }
+            #analogClock {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 200px; /* Ширина и высота круга с часами */
+                height: 200px;
+                border-radius: 50%; /* Превращаем квадрат в круг */
+                border: 5px solid black; /* Граница круга */
+            }
+
+            #secondHand {
+                position: absolute;
+                width: 5px;
+                height: 70px;
+                background-color: black;
+                top: 15%;
+                left: 50%;
+                transform-origin: bottom center;  
+            }
+
+            #minuteHand {
+                position: absolute;
+                width: 3px;
+                height: 90px;
+                background-color: black;
+                top: 10%;
+                left: 50%;
+                transform-origin: bottom center;
+}
+
         </style>
         <script src="time.js"></script>
     </head>
@@ -27,8 +58,12 @@
             НГТУ, ФБ, Лабораторная работа 8
         </header>
         
-        <main class="messeg">
-            <div id="time">00:00:00</div>
+        <main>
+            <div class="current" id="time">00:00:00</div>
+            <div id="analogClock">
+                <div id="secondHand"></div>
+                <div id="minuteHand"></div>
+            </div>            
         </main>
 
         <footer>
