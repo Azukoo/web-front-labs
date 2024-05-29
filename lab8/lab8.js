@@ -42,3 +42,16 @@ function showDate() {
     let days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
     out9.innerHTML = "День недели: " + days[today9.getDay()];
 }
+
+function showDayOfWeek() {
+    let inputDate = document.getElementById('input-date').value;
+    let inputMonth = document.getElementById('input-month').value - 1; // месяцы начинаются с 0
+    let inputYear = document.getElementById('input-year').value;
+
+    let inputDateObj = new Date(inputYear, inputMonth, inputDate);
+    let daysOfWeek = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+    let dayOfWeek = daysOfWeek[inputDateObj.getDay()];
+
+    let outputDiv = document.getElementById('day-of-week-output');
+    outputDiv.innerHTML = "День недели: " + dayOfWeek;
+}

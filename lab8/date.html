@@ -40,6 +40,17 @@
             <div id="current-day"></div>
             <div id="current-weekday"></div>
         </p>
+        <div>
+            <label for="input-date">Введите дату(от 1 до 31):</label>
+            <input type="number" id="input-date" min="1" max="31">
+            <label for="input-month">Введите месяц (от 1 до 12):</label>
+            <input type="number" id="input-month" min="1" max="12">
+            <label for="input-year">Введите год:</label>
+            <input type="number" id="input-year">
+            <button onclick="showDayOfWeek()">Определить день недели</button>
+        </div>
+
+        <div id="day-of-week-output"></div>
         </main>
 
         <footer>
