@@ -32,7 +32,7 @@
             }
             let average = sum / elements.length;
             average = average.toFixed(2);
-            document.getElementById("detail").innerText = `Среднее значение: ${Average}`;
+            document.getElementById("detail").innerText = `Среднее значение: ${average}`;
             document.getElementById("button").style.display = "none";
         }
     </script>
@@ -46,8 +46,8 @@
         <main>
             <button onclick="showExchange()">Курс доллара</button>
             <table border="1" id="dollar-table"></table>
-            <button id="button" onclick="calculateAverage">Показать среднее значение</button>
-            <div id="detail"></div>
+            <button id="detail" onclick="calculateAverage">Показать среднее значение</button>
+            <div id="button"></div>
         </main>
 
         <footer>
