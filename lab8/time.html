@@ -8,17 +8,27 @@
         <link rel="shortcut icon" href="C:\Users\Victoria Bolotovna\Desktop\favicon.ico" type="image/x-icon">
         <link rel="shortcut icon" href="C:\Users\Victoria Bolotovna\Desktop\favicon-16x16.png">
         <link rel="icon" href="C:\Users\Victoria Bolotovna\Desktop\favicon-32x32.png">
+        <style>
+            .messeg {
+                background-color: aliceblue;
+                border: 8px solid #000;
+                padding: 10px;
+                margin: 10px 0;
+                font-family: Arial, sans-serif;
+                text-align: center;
+                font-size: 20em;
+            }
+        </style>
+        <script src="time.js"></script>
     </head>
 
-    <body>
+    <body onload="showTime()">
         <header onclick="showAuthor()">
             НГТУ, ФБ, Лабораторная работа 8
         </header>
         
-        <main>
-            <li><a href="date.html">Дата</a></li>
-            <li><a href="get-days-counts.html">Число дней с даты рождения</a></li>
-            <li><a href="time.html">Время</li>
+        <main class="messeg">
+            <div id="time">00:00:00</div>
         </main>
 
         <footer>
