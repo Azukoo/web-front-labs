@@ -8,6 +8,16 @@
         <link rel="shortcut icon" href="C:\Users\Victoria Bolotovna\Desktop\favicon.ico" type="image/x-icon">
         <link rel="shortcut icon" href="C:\Users\Victoria Bolotovna\Desktop\favicon-16x16.png">
         <link rel="icon" href="C:\Users\Victoria Bolotovna\Desktop\favicon-32x32.png">
+        <style>
+            .mess {
+                background-color: rgb(224, 224, 133);
+                border: 8px solid #000;
+                padding: 10px;
+                margin: 10px 0;
+                font-family: Arial, sans-serif;
+            }
+        </style>
+        <script src="get-days-count.js"></script>
     </head>
 
     <body>
@@ -15,9 +25,17 @@
             НГТУ, ФБ, Лабораторная работа 8
         </header>
         
-        <main>
-            <li><a href="date.html">Дата</a></li>
-            <li><a href="get-days-counts.html">Число дней с даты рождения</a></li>
+        <main class="mess">
+            <div>
+                <label for="input-date">Введите дату рождения: <input type="date" id="input-date"></label>
+            </div>
+            <div>
+                <button onclick="showDaysCount()">Показать число дней</button>
+            </div>
+            <div id="days-count-output"></div>
+            <div>
+                <button onclick="clearFields()">Очистить</button>
+            </div>
         </main>
 
         <footer>
