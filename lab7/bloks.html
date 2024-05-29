@@ -51,15 +51,17 @@
        
         function add20_50() {
             let main = document.querySelector('main');
-            for(let i = 20; i<=50; i+=2.5) {
+            let counter = -10;
+            while (counter >= -60) {
                 let newBlock = document.createElement('div');
                 newBlock.style.width = '100px';
                 newBlock.style.border = '1px solid';
                 newBlock.style.color = 'black';
                 newBlock.style.backgroundColor = "pink";
                 newBlock.style.textAlign = "center";
-                newBlock.innerHTML = `${i}`;
+                newBlock.innerHTML = `${counter}`;
                 main.appendChild(newBlock);
+                counter -= 5;
             }
         }
         function add10_80() {
