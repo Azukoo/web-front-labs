@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Курс валют</title>
+        <link rel="stylesheet">
+        <link rel="shortcut icon" href="C:\Users\Victoria Bolotovna\Desktop\channels4_profile.jpg" type="image/x-icon">
+        <link rel="shortcut icon" href="C:\Users\Victoria Bolotovna\Desktop\channels4_profile.jpg">
+        <link rel="icon" href="C:\Users\Victoria Bolotovna\Desktop\channels4_profile.jpg">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <style>
+           .calc {
+                border: 2px solid black;
+                background-color: pink;
+           }
+        </style>
+
+        <script>
+            var exchangeRate;
+            $(document).ready(function(){
+                $.ajax({
+                url: 'https://www.cbr-xml-daily.ru/daily_json.js',
+                type: 'GET',
+                dataType: 'json',
+                success: function(data){
+                    exchangeRate = data.Valute.CNY.Value;
+                    $('#exchange-rate').text('Курс юаня на сегодня: ' + exchangeRate + ' рублей');
+                }
+                });
+            });
+    
+            function calculateExchange(){
+                var rubAmount = parseFloat($('#rub-amount').val());
+                var currency = $('#currency').val();
+                if(currency === 'CNY'){
+                    var result = rubAmount / exchangeRate;
+                    $('#result').text(rubAmount + ' рублей = ' + result.toFixed(2) + ' юаней');
+                } else {
+                    var result = rubAmount * exchangeRate;
+                    $('#result').text(rubAmount + ' юаней = ' + result.toFixed(2) + ' рублей');
+                }
+            }
+        </script>
+    </head>
+<body>
+    <main class="calc">
+        <h1>Курс валют на сегодня</h1>
+        <div id="exchange-rate"></div>
+        <h2>Калькулятор валют</h2>
+        <input type="number" id="rub-amount" placeholder="Сумма в рублях">
+        <select id="currency">
+            <option value="CNY">Китайский юань (CNY)</option>
+            <option value="RUB">Российский рубль (RUB)</option>
+        </select>
+        <button onclick="calculateExchange()">Перевести</button>
+    
+        <div id="result"></div>
+    </main>
+   
+    <footer>
+        &copy; Санданова Виктория, ФБИ-22, 2 курс, 2024
+    </footer>
+</body>
+</html>
