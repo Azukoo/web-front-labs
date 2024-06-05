@@ -1,21 +1,11 @@
 <!DOCTYPE html>
-<html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <title>Новости компании "АльфаСтрахование"</title>
-        <link rel="stylesheet">
-        <link rel="shortcut icon" href="C:\Users\Victoria Bolotovna\Desktop\channels4_profile.jpg" type="image/x-icon">
-        <link rel="shortcut icon" href="C:\Users\Victoria Bolotovna\Desktop\channels4_profile.jpg">
-        <link rel="icon" href="C:\Users\Victoria Bolotovna\Desktop\channels4_profile.jpg">
-        <style>
-        .news-card {
-            border: 1px solid black;
-            padding: 10px;
-            margin: 10px;
-        }
-        </style>
-        <script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Альфастрахование</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
             function showNews(newsId) {
                 var news = document.getElementById(newsId);
                 if (news.style.display === "none") {
@@ -24,9 +14,39 @@
                     news.style.display = "none";
                 }
             }
-        </script>
-    </head>
-    <body>
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header1">
+            <img src="C:\Users\Victoria Bolotovna\Desktop\alfastrahovanie.png" alt="Логотип АльфаСтрахование" height="60px">
+            <p>Частным лицам</p>
+            <p>Корпоративным клиентам</p>
+            <p>Партнерам</p>
+            <p>VIP-Клиентам</p>
+            <p>Офисы</p>
+            <p>Войти</p>
+        </div>
+        <div class="header2">
+            <p>Автомобили</p> 
+            <p>Здоровье</p> 
+            <p>Путешествия</p> 
+            <p>Имущество</p> 
+            <p>Инвестиции</p> 
+            <p>Приведи друга</p> 
+            <p>Связаться с нами</p>
+    
+        </div>
+    </header>
+    <main class="menu">
+            <h1>Главная страница</h1>
+            <h2><p>Добро пожаловать на наш сайт!</p>
+            <li><a href="company.html">О компании</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="curs_valute.html">Курс валют</a></li>
+            <li><a href="contact_data.html">Контактные данные</a></li>
+            <li><a href="video.html">Видео</li></a></h2>
+        </main>
         <div class="news-card">
             <h3>29 мая 2024</h3>
             <h2>«АльфаСтрахование» в Новосибирске успешно борется с мошенниками</h2>
@@ -176,9 +196,47 @@
             <p>В начале мая большую часть центральной России накрыли аномальные холода — не просто заморозки, а настоящие метели. Гибель посевов зафиксирована в 23 регионах страны, во многих из них введен режим чрезвычайной ситуации. Правительство призвало оперативно организовать пересев погибших культур.
             </p>
         </div>
-    
         <footer>
-            &copy; Санданова Виктория, ФБИ-22, 2 курс, 2024
+            <div class="header1">
+              <p>Часто задаваемые вопросы</p>
+              <p>Задать вопросы</p>
+              <p>Запрос по КБМ+</p>
+              <p>Служба контроля качества</p>
+            </div>
+            <div class="footer1">
+                <div>
+                    <p>Инвестору и акционер</p>
+                    <p>Перестраховка</p>
+                    <p>Тендеры</p>
+                    <p>Конфиденциальность</p>
+                </div>
+                <div>
+                    <p>О компании</p>
+                    <p>Карта сайта</p>
+                    <p>Пресс-центр</p>
+                    <p>Вакансии</p>
+                    <p>Благотворительность</p>
+                    <p>Инвестиции</p>
+                </div>
+                <div>
+                    <p>Вместе безопаснее</p>
+                    <p>Правила страхования</p>
+                </div>
+                <div>
+                    <p>Прекращение действия доверенностей</p>
+                </div>
+            </div>
+            <hr>
+            <div class="footer2">
+                <div>
+                    <p class="num">✲0999✆</p>
+                    <p class="txt">Новосибирск</p>
+                </div>
+            </div>
+            <div class="footer3">
+                © 2008 — 2024 AO «АльфаСтрахование». Регистрационный номер 2239 в ЕГР ССД. В составе консорциума «Альфа-Групп»
+            </div>
+           
         </footer>
     </body>
 </html>
