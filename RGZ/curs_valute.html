@@ -1,23 +1,14 @@
 <!DOCTYPE html>
-<html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <title>Курс валют</title>
-        <link rel="stylesheet">
-        <link rel="shortcut icon" href="C:\Users\Victoria Bolotovna\Desktop\channels4_profile.jpg" type="image/x-icon">
-        <link rel="shortcut icon" href="C:\Users\Victoria Bolotovna\Desktop\channels4_profile.jpg">
-        <link rel="icon" href="C:\Users\Victoria Bolotovna\Desktop\channels4_profile.jpg">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <style>
-           .calc {
-                border: 2px solid black;
-                background-color: pink;
-           }
-        </style>
-
-        <script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Альфастрахование</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
             var exchangeRate;
+
             $(document).ready(function(){
                 $.ajax({
                 url: 'https://www.cbr-xml-daily.ru/daily_json.js',
@@ -41,10 +32,39 @@
                     $('#result').text(rubAmount + ' юаней = ' + result.toFixed(2) + ' рублей');
                 }
             }
-        </script>
-    </head>
+    </script>
+</head>
 <body>
-    <main class="calc">
+    <header>
+        <div class="header1">
+            <img src="C:\Users\Victoria Bolotovna\Desktop\alfastrahovanie.png" alt="Логотип АльфаСтрахование" height="60px">
+            <p>Частным лицам</p>
+            <p>Корпоративным клиентам</p>
+            <p>Партнерам</p>
+            <p>VIP-Клиентам</p>
+            <p>Офисы</p>
+            <p>Войти</p>
+        </div>
+        <div class="header2">
+            <p>Автомобили</p> 
+            <p>Здоровье</p> 
+            <p>Путешествия</p> 
+            <p>Имущество</p> 
+            <p>Инвестиции</p> 
+            <p>Приведи друга</p> 
+            <p>Связаться с нами</p>
+        </div>
+    </header>
+    <main class="menu">
+        <h1>Главная страница</h1>
+        <h2><p>Добро пожаловать на наш сайт!</p>
+        <li><a href="company.html">О компании</a></li>
+        <li><a href="news.html">Новости</a></li>
+        <li><a href="curs_valute.html">Курс валют</a></li>
+        <li><a href="contact_data.html">Контактные данные</a></li>
+        <li><a href="video.html">Видео</li></a></h2>
+    </main>
+    <div class="calc">
         <h1>Курс валют на сегодня</h1>
         <div id="exchange-rate"></div>
         <h2>Калькулятор валют</h2>
@@ -56,10 +76,49 @@
         <button onclick="calculateExchange()">Перевести</button>
     
         <div id="result"></div>
-    </main>
-   
+    </div>
     <footer>
-        &copy; Санданова Виктория, ФБИ-22, 2 курс, 2024
+        <div class="header1">
+          <p>Часто задаваемые вопросы</p>
+          <p>Задать вопросы</p>
+          <p>Запрос по КБМ+</p>
+          <p>Служба контроля качества</p>
+        </div>
+        <div class="footer1">
+            <div>
+                <p>Инвестору и акционер</p>
+                <p>Перестраховка</p>
+                <p>Тендеры</p>
+                <p>Конфиденциальность</p>
+            </div>
+            <div>
+                <p>О компании</p>
+                <p>Карта сайта</p>
+                <p>Пресс-центр</p>
+                <p>Вакансии</p>
+                <p>Благотворительность</p>
+                <p>Инвестиции</p>
+            </div>
+            <div>
+                <p>Вместе безопаснее</p>
+                <p>Правила страхования</p>
+            </div>
+            <div>
+                <p>Прекращение действия доверенностей</p>
+            </div>
+        </div>
+        <hr>
+        <div class="footer2">
+            <div>
+                <p class="num">✲0999✆</p>
+                <p class="txt">Новосибирск</p>
+            </div>
+        </div>
+        <div class="footer3">
+            © 2008 — 2024 AO «АльфаСтрахование». Регистрационный номер 2239 в ЕГР ССД. В составе консорциума «Альфа-Групп»
+        </div>
+       
     </footer>
 </body>
 </html>
+    
